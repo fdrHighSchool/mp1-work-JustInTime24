@@ -2,9 +2,9 @@
 ## fall-22-mp1-work
 
 
-### Last Name:  
-### First Name: 
-### GitHub Username: 
+### Last Name:  Serano 
+### First Name: Justin 
+### GitHub Username: JustInTime24
 
 ---
 #### General Workflow: 
