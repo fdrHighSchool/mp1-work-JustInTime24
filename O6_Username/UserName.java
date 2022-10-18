@@ -28,18 +28,17 @@ public class UserName {
     if (Role .equals("teacher")) {
         System.out.println(firstName.substring(0, 1) + lastName + favNum + "@schools.nyc.gov");
     }//close if teacher statement
-    System.out.println("Your password is: " + rand_int1 + rand_int2 + rand_int3 + rand_int4);
     s.close();
   } // end main method
 
-  /*
-   * Name: initialize
-   * Purpose: send back the first character (inital) of a name
-   * Input: a name (String)
-   * Return: a single character (String)
-   */
-  public static String initialize(String n) {
-    return n.substring(0, 1);
-  } // end initialize method
-
+  public static String genPass(int length) {
+      String password = "";
+      
+      char c;
+      for(int i=65;i<=90;i++) {
+        c =(char)i;
+        System.out.println(i+"  =  "+c);
+        }
+    return password;
+    }
 } // end class
