@@ -30,15 +30,16 @@ public class UserName {
     }//close if teacher statement
     s.close();
   } // end main method
-
+  
   public static String genPass(int length) {
       String password = "";
-      
-      char c;
+      int rand = (int)(Math.random()*(90-65+1)+65);
+      char c = (char)rand;
       for(int i=65;i<=90;i++) {
         c =(char)i;
-        System.out.println(i+"  =  "+c);
-        }
-    return password;
+        System.out.println(i+"  =  "+c); 
+    }
+    
+        return password;
     }
 } // end class
