@@ -5,11 +5,6 @@ public class UserName {
     // create Scanner object
     Scanner s = new Scanner(System.in);
     Random rand = new Random();
-    
-    int rand_int1 = rand.nextInt(10);
-    int rand_int2 = rand.nextInt(10);
-    int rand_int3 = rand.nextInt(10);
-    int rand_int4 = rand.nextInt(10);
     // get String input from user
     System.out.print("Enter your first name: ");
     String firstName = s.nextLine();
@@ -22,24 +17,36 @@ public class UserName {
     System.out.print("Are you a student or a teacher? ");
     String Role = s.nextLine().toLowerCase();
     
+    generatePassword(8);
+    
     if (Role .equals("student")) {
         System.out.println(firstName + lastName.substring(0, 1) + favNum + "@nycstudents.net");
     }//close if student statement
     if (Role .equals("teacher")) {
         System.out.println(firstName.substring(0, 1) + lastName + favNum + "@schools.nyc.gov");
     }//close if teacher statement
+    
     s.close();
   } // end main method
   
-  public static String genPass(int length) {
-      String password = "";
-      int rand = (int)(Math.random()*(90-65+1)+65);
+  public static String generatePassword(int length) {
+    String password = "";
+    for(int i = 0; i < length; i++) {
+      // generate a random number
+      // 65 - 90 capital letter
+      // 97 - 122 lower case
+      // 33 - 47 special symbols
+      int rand = (int)(Math.random()*(90-65+1) + 65);
+
+      // convert the int ---> character c =(char)i;
       char c = (char)rand;
-      for(int i=65;i<=90;i++) {
-        c =(char)i;
-        System.out.println(i+"  =  "+c); 
-    }
+      //System.out.print(rand + c);
+      password += c;
     
-        return password;
-    }
+      // add the char to the password String
+      
+    } // end for loop
+    System.out.println("Your password is: " + password);
+    return password; 
+}
 } // end class
