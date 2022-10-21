@@ -36,9 +36,9 @@ public class UserName {
       // 65 - 90 capital letter
       // 97 - 122 lower case
       // 33 - 47 special symbols
-      int rand = (int)(Math.random()*(90-65+1) + 65);
-
-      // convert the int ---> character c =(char)i;
+      int rand = (int)(Math.random()*(122-33+1) + 33);
+      
+      // convert the int ---> Character (char)i 
       char c = (char)rand;
       //System.out.print(rand + c);
       password += c;
